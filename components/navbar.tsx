@@ -7,9 +7,8 @@ import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 
 export const Navbar = () => {
   const navItems = [
-    { title: "About", href: "/about" },
     { title: "Projects", href: "/projects" },
-    { title: "Contact", href: "/contact" },
+    { title: "Experiments", href: "/experiments" },
     { title: "Blog", href: "/blog" },
   ];
 
@@ -37,7 +36,7 @@ export const Navbar = () => {
           duration: 0.4,
           ease: "easeInOut",
         }}
-        className="fixed inset-x-0 top-0 z-50 mx-auto flex max-w-4xl items-center justify-between rounded-full bg-white px-3 py-2 dark:bg-neutral-900"
+        className="fixed inset-x-0 top-0 z-50 mx-auto flex max-w-4xl items-center justify-between rounded-full px-8 py-2 backdrop-blur-sm"
       >
         <Image
           className="h-10 w-10 rounded-full"
