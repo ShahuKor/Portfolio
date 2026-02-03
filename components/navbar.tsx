@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Container } from "./Container";
 import Image from "next/image";
@@ -21,6 +21,7 @@ export const Navbar = () => {
   const [hovered, setHovered] = useState<number | null>(null);
   const { scrollY } = useScroll();
   const [scrolled, setScrolled] = useState<boolean>(false);
+  const [mounted, setMounted] = useState(false);
 
   const toggleTheme = () => {
     if (theme === "light") {
@@ -29,8 +30,12 @@ export const Navbar = () => {
       setTheme("light");
     }
   };
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const getThemeIcon = () => {
+    if (!mounted) return <LuSunDim className="h-5 w-5" />;
     switch (theme) {
       case "light":
         return <CiDark className="h-5 w-5 text-neutral-300" />;

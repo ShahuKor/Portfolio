@@ -33,9 +33,9 @@ const technologies = [
 export const Technologies = () => {
   return (
     <div className="relative mt-4 flex h-40 flex-col justify-center pb-3">
-      <div className="pointer-events-none absolute top-0 -right-7 -left-7 h-px border-t border-dashed border-gray-300" />
-      <div className="pointer-events-none absolute -right-7 bottom-0 -left-7 h-px border-b border-dashed border-gray-300" />
-      <div className="font-medium text-neutral-500 italic">
+      <div className="pointer-events-none absolute top-0 -right-7 -left-7 h-px border-t border-dashed border-neutral-300 dark:border-neutral-200/20" />
+      <div className="pointer-events-none absolute -right-7 bottom-0 -left-7 h-px border-b border-dashed border-neutral-300 dark:border-neutral-200/20" />
+      <div className="font-medium text-neutral-500 italic dark:text-neutral-300">
         What I Build With ?{" "}
       </div>
       <div className="mt-3 flex flex-wrap gap-2">
@@ -50,13 +50,15 @@ export const Technologies = () => {
                 style={{ color: tech.color }}
               />
             </div>
-            <p className="ml-1 text-sm font-medium text-neutral-700">
+            <p className="ml-1 text-sm font-medium text-neutral-700 dark:text-neutral-300/80">
               {tech.name}
             </p>
           </div>
         ))}
         <div className="skill-inner-shadow inline-flex items-center self-end rounded-md border border-dashed border-black/20 bg-black/5 px-2 py-1 text-sm text-black dark:border-white/30 dark:bg-white/15 dark:text-white">
-          <p className="ml-1 text-sm font-medium text-neutral-700">More...</p>
+          <p className="ml-1 text-sm font-medium text-neutral-700 dark:text-neutral-300/80">
+            More...
+          </p>
         </div>
       </div>
     </div>
