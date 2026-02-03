@@ -1,20 +1,45 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { Container } from "./Container";
 import Image from "next/image";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import { useTheme } from "next-themes";
+import { LuSunDim } from "react-icons/lu";
+import { CiDark } from "react-icons/ci";
 
 export const Navbar = () => {
   const navItems = [
+    { title: "About Me", href: "/about-me" },
     { title: "Projects", href: "/projects" },
-    { title: "Experiments", href: "/experiments" },
+    { title: "Learnings", href: "/learnings" },
     { title: "Blog", href: "/blog" },
   ];
+
+  const { theme, setTheme } = useTheme();
 
   const [hovered, setHovered] = useState<number | null>(null);
   const { scrollY } = useScroll();
   const [scrolled, setScrolled] = useState<boolean>(false);
+
+  const toggleTheme = () => {
+    if (theme === "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  };
+
+  const getThemeIcon = () => {
+    switch (theme) {
+      case "light":
+        return <CiDark className="h-5 w-5 text-neutral-300" />;
+      case "dark":
+        return <LuSunDim className="h-5 w-5 text-neutral-300/50" />;
+      default:
+        return <LuSunDim className="h-5 w-5" />;
+    }
+  };
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (latest > 20) {
@@ -66,6 +91,12 @@ export const Navbar = () => {
             </Link>
           ))}
         </div>
+        <button
+          className="rounded-full border border-neutral-400/60 p-0.5"
+          onClick={toggleTheme}
+        >
+          {getThemeIcon()}
+        </button>
       </motion.nav>
     </Container>
   );

@@ -4,15 +4,15 @@ import { Technologies } from "./technologies";
 export const Hero = () => {
   return (
     <div className="py-16">
-      <h1 className="text-primary text-4xl font-bold">
-        I build stuff to see if it’s possible.
+      <h1 className="text-4xl font-bold text-(--color-primary)">
+        Hello! I'm Shahu Kor.
       </h1>
 
-      <p className="text-secondary text-md max-w-lg pt-7 font-medium tracking-wide">
-        Hello, I'm Shahu Kor. I enjoy coding and building things, with most of
-        my work focused on
-        <span className="text-primary px-1.5 font-medium">
-          full-stack web development.
+      <p className="text-md max-w-lg pt-7 font-medium tracking-wide text-(--color-secondary)">
+        I build stuff to see if it’s possible. I enjoy coding and building
+        things, with most of my work focused on
+        <span className="px-1.5 font-medium text-(--color-primary)">
+          full-stack development.
         </span>
         But theres{" "}
         <Link href="/experiments" className="underline decoration-neutral-500">
