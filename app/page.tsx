@@ -1,3 +1,4 @@
+import Contact from "@/components/contact-me";
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/hero";
 import { Projects } from "@/components/projects-landing";
@@ -12,6 +13,7 @@ export default function Home() {
         <Hero />
         <WorkExp />
         <Projects />
+        <Contact />
       </Container>
     </div>
   );

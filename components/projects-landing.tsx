@@ -13,7 +13,7 @@ interface Project {
 
 const projects: Project[] = [
   {
-    src: "/quib-image.jpg",
+    src: "/quib-image-new.jpg",
     title: "Quib",
     description:
       "A PDF Summarizer that converts any pdf into reels like componenet, which makes it user friendly and interactive. ",
@@ -21,7 +21,7 @@ const projects: Project[] = [
     githublink: "https://github.com/ShahuKor/Quib",
   },
   {
-    src: "/cliply-image.jpg",
+    src: "/cliply-image-new.jpg",
     title: "Cliply",
     description:
       "AI-powered platform to crop images for social formats, compress videos with minimal quality loss.",
@@ -30,7 +30,7 @@ const projects: Project[] = [
     livelink: "https://cliply-kohl.vercel.app/",
   },
   {
-    src: "/foodflux-image.jpg",
+    src: "/foodflux-image-new.jpg",
     title: "FoodFlux",
     description:
       "A completely distributed microservices system demonstrating food delivery services and inter-service communication.",
@@ -39,7 +39,7 @@ const projects: Project[] = [
       "https://github.com/ShahuKor/FoodFlux-Distributed-Food-Ordering",
   },
   {
-    src: "/webchat-ai-image.jpg",
+    src: "/webchat-ai-image-new.jpg",
     title: "WebChat AI",
     description:
       "A RAG chatbot that makes chatgpt get context of any url or website, built with Streamlit and LangChain.",
@@ -50,12 +50,13 @@ const projects: Project[] = [
 
 export const Projects = () => {
   return (
-    <div className="py-6">
+    <div className="relative pt-3 pb-10">
+      <div className="pointer-events-none absolute -right-7 bottom-0 -left-7 h-px border-b border-dashed border-neutral-300 dark:border-neutral-200/20" />
       <p className="py-4 text-2xl font-semibold tracking-tight text-neutral-800 dark:text-neutral-100">
         Some of My Projects
       </p>
       <div className="flex flex-col items-center">
-        <div className="grid grid-cols-1 gap-4 py-4 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 py-4 md:grid-cols-2">
           {projects.map((project, index) => (
             <Card
               key={index}
