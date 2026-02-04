@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Card from "./ui/card";
 
 interface Project {
@@ -15,7 +16,7 @@ const projects: Project[] = [
     src: "/quib-image.jpg",
     title: "Quib",
     description:
-      "A full-stack e-commerce solution with payment integration and inventory management.",
+      "A PDF Summarizer that converts any pdf into reels like componenet, which makes it user friendly and interactive. ",
     projectlink: "/projects/ecommerce",
     githublink: "https://github.com/ShahuKor/Quib",
   },
@@ -23,7 +24,7 @@ const projects: Project[] = [
     src: "/cliply-image.jpg",
     title: "Cliply",
     description:
-      "Collaborative task management tool with real-time updates and team features.",
+      "AI-powered platform to crop images for social formats, compress videos with minimal quality loss.",
     projectlink: "/projects/task-app",
     githublink: "https://github.com/ShahuKor/About-Cliply",
     livelink: "https://cliply-kohl.vercel.app/",
@@ -32,7 +33,7 @@ const projects: Project[] = [
     src: "/foodflux-image.jpg",
     title: "FoodFlux",
     description:
-      "Collaborative task management tool with real-time updates and team features.",
+      "A completely distributed microservices system demonstrating food delivery services and inter-service communication.",
     projectlink: "/projects/task-app",
     githublink:
       "https://github.com/ShahuKor/FoodFlux-Distributed-Food-Ordering",
@@ -41,7 +42,7 @@ const projects: Project[] = [
     src: "/webchat-ai-image.jpg",
     title: "WebChat AI",
     description:
-      "Collaborative task management tool with real-time updates and team features.",
+      "A RAG chatbot that makes chatgpt get context of any url or website, built with Streamlit and LangChain.",
     projectlink: "/projects/task-app",
     githublink: "https://github.com/ShahuKor/WebChat-Ai",
   },
@@ -50,7 +51,7 @@ const projects: Project[] = [
 export const Projects = () => {
   return (
     <div className="py-6">
-      <p className="py-4 text-2xl font-semibold tracking-tight text-neutral-600 dark:text-neutral-100">
+      <p className="py-4 text-2xl font-semibold tracking-tight text-neutral-800 dark:text-neutral-100">
         Some of My Projects
       </p>
       <div className="flex flex-col items-center">
@@ -67,6 +68,11 @@ export const Projects = () => {
             />
           ))}
         </div>
+        <Link href="/projects">
+          <button className="mt-4 rounded-md border border-neutral-200 px-3 py-1.5 text-sm font-medium shadow-[inset_0_2px_4px_rgba(0,0,0,0.06)] transition-shadow hover:shadow-[inset_0_2px_4px_rgba(0,0,0,0.12)] dark:border-neutral-300/30 dark:bg-neutral-50/5 dark:shadow-[inset_2px_4px_4px_rgba(255,255,255,0.06)] dark:hover:shadow-[inset_0_2px_4px_rgba(255,255,255,0.12)]">
+            View All Projects
+          </button>
+        </Link>
       </div>
     </div>
   );

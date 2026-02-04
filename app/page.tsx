@@ -1,6 +1,7 @@
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/hero";
 import { Projects } from "@/components/projects-landing";
+import WorkExp from "@/components/work-experience";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         <div className="pointer-events-none absolute top-0 bottom-0 left-0 w-px border border-dashed border-neutral-200 dark:border-neutral-200/20" />
         <div className="pointer-events-none absolute top-0 right-0 bottom-0 w-px border border-dashed border-neutral-200 dark:border-neutral-200/20" />
         <Hero />
+        <WorkExp />
         <Projects />
       </Container>
     </div>

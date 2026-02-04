@@ -39,11 +39,11 @@ export default function Card({
           {title}
         </h3>
 
-        <p className="flex-1 pb-2 text-base font-medium text-(--color-secondary)">
+        <p className="flex-1 text-base font-medium text-(--color-secondary)">
           {description}
         </p>
 
-        <div className="pb-8">
+        <div>
           <p className="pb-3 text-base font-medium text-(--color-secondary)">
             Links
           </p>
@@ -60,7 +60,7 @@ export default function Card({
         </div>
       </div>
 
-      <div className="flex items-center justify-between px-4 pb-10">
+      <div className="flex items-center justify-between px-4 pb-7">
         <Link
           href={projectlink}
           className="text-sm font-medium text-neutral-800 underline-offset-4 hover:underline dark:text-neutral-200"
