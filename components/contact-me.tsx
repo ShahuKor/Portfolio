@@ -1,6 +1,6 @@
 "use client";
-
-import { useState } from "react";
+import { Toaster, toast } from "sonner";
+import { useEffect, useState } from "react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -12,6 +12,21 @@ export default function Contact() {
     "idle" | "loading" | "success" | "error"
   >("idle");
 
+  useEffect(() => {
+    if (status === "success") {
+      toast(
+        <div className="text-(--color-secondary)">
+          Message Sent Successfully
+        </div>,
+      );
+    } else if (status === "error") {
+      toast(
+        <div className="text-red-500 dark:text-red-900">
+          Failed To Send the Message
+        </div>,
+      );
+    }
+  }, [status]);
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("loading");
@@ -100,6 +115,7 @@ export default function Contact() {
         </div>
 
         <div className="flex w-full justify-center">
+          <Toaster />
           <button
             type="submit"
             disabled={status === "loading"}
@@ -108,17 +124,6 @@ export default function Contact() {
             {status === "loading" ? "Sending..." : "Send Message"}
           </button>
         </div>
-
-        {status === "success" && (
-          <p className="text-center text-green-600 dark:text-green-400">
-            Message sent successfully!
-          </p>
-        )}
-        {status === "error" && (
-          <p className="text-center text-red-600 dark:text-red-400">
-            Failed to send message. Please try again.
-          </p>
-        )}
       </form>
     </div>
   );
