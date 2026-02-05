@@ -34,18 +34,6 @@ export const Navbar = () => {
     setMounted(true);
   }, []);
 
-  const getThemeIcon = () => {
-    if (!mounted) return <LuSunDim className="h-5 w-5" />;
-    switch (theme) {
-      case "light":
-        return <CiDark className="h-5 w-5 text-neutral-300" />;
-      case "dark":
-        return <LuSunDim className="h-5 w-5 text-neutral-300/50" />;
-      default:
-        return <LuSunDim className="h-5 w-5" />;
-    }
-  };
-
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (latest > 20) {
       setScrolled(true);
@@ -53,6 +41,10 @@ export const Navbar = () => {
       setScrolled(false);
     }
   });
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <Container>
@@ -68,15 +60,18 @@ export const Navbar = () => {
         }}
         className="fixed inset-x-0 top-0 z-50 mx-auto flex max-w-4xl items-center justify-between rounded-full px-8 py-2 backdrop-blur-sm"
       >
-        <Image
-          className="h-10 w-10 rounded-full"
-          src="/profile.jpeg"
-          alt="Shahu Profile Photo Github"
-          height={40}
-          width={40}
-          draggable={false}
-          loading="lazy"
-        />
+        <Link href={"/"}>
+          <Image
+            className="h-10 w-10 rounded-full"
+            src="/profile.jpeg"
+            alt="Shahu Profile Photo Github"
+            height={40}
+            width={40}
+            draggable={false}
+            loading="lazy"
+          />
+        </Link>
+
         <div className="flex items-center justify-center">
           {navItems.map((item, index) => (
             <Link
@@ -100,7 +95,11 @@ export const Navbar = () => {
           className="rounded-full border border-neutral-400/60 p-0.5"
           onClick={toggleTheme}
         >
-          {getThemeIcon()}
+          {theme === "light" ? (
+            <CiDark className="h-5 w-5 text-neutral-300" />
+          ) : (
+            <LuSunDim className="h-5 w-5 text-neutral-300/50" />
+          )}
         </button>
       </motion.nav>
     </Container>
