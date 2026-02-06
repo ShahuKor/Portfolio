@@ -53,16 +53,16 @@ export default function Contact() {
   };
 
   return (
-    <div className="relative pt-6 pb-10">
+    <div id="contact-me" className="relative pt-6 pb-10">
       <div className="pointer-events-none absolute -right-7 bottom-0 -left-7 h-px border-b border-dashed border-neutral-300 dark:border-neutral-200/20" />
-      <p className="py-4 text-2xl font-semibold tracking-tight text-neutral-800 dark:text-neutral-100">
+      <p className="py-4 text-lg font-semibold tracking-tight text-neutral-800 md:text-xl dark:text-neutral-100">
         Contact Me
       </p>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label
             htmlFor="name"
-            className="block text-base font-medium tracking-wide text-(--color-secondary)"
+            className="block text-xs font-medium tracking-wide text-(--color-secondary) md:text-sm"
           >
             Name
           </label>
@@ -79,7 +79,7 @@ export default function Contact() {
         <div>
           <label
             htmlFor="email"
-            className="block text-base font-medium tracking-wide text-(--color-secondary)"
+            className="block text-xs font-medium tracking-wide text-(--color-secondary) md:text-sm"
           >
             Email
           </label>
@@ -98,9 +98,9 @@ export default function Contact() {
         <div>
           <label
             htmlFor="message"
-            className="block text-base font-medium tracking-wide text-(--color-secondary)"
+            className="block text-xs font-medium tracking-wide text-(--color-secondary) md:text-sm"
           >
-            Message
+            Drop a Message
           </label>
           <textarea
             id="message"
@@ -119,7 +119,7 @@ export default function Contact() {
           <button
             type="submit"
             disabled={status === "loading"}
-            className="mt-4 rounded-md border border-neutral-200 px-3 py-1.5 text-sm font-medium shadow-[inset_0_2px_4px_rgba(0,0,0,0.06)] transition-shadow hover:shadow-[inset_0_2px_4px_rgba(0,0,0,0.12)] dark:border-neutral-300/30 dark:bg-neutral-50/5 dark:shadow-[inset_2px_4px_4px_rgba(255,255,255,0.06)] dark:hover:shadow-[inset_0_2px_4px_rgba(255,255,255,0.12)]"
+            className="mt-4 rounded-md border border-neutral-200 px-3 py-1.5 text-xs font-medium shadow-[inset_0_2px_4px_rgba(0,0,0,0.06)] transition-shadow hover:shadow-[inset_0_2px_4px_rgba(0,0,0,0.12)] md:text-sm dark:border-neutral-300/30 dark:bg-neutral-50/5 dark:shadow-[inset_2px_4px_4px_rgba(255,255,255,0.06)] dark:hover:shadow-[inset_0_2px_4px_rgba(255,255,255,0.12)]"
           >
             {status === "loading" ? "Sending..." : "Send Message"}
           </button>

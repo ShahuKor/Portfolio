@@ -6,6 +6,7 @@ import {
   SiNodedotjs,
   SiExpress,
   SiPostgresql,
+  SiPostman,
 } from "react-icons/si";
 
 interface Technology {
@@ -31,7 +32,7 @@ const companydetails: WorkedCompanies[] = [
     name: "TechNetz Solutions",
     role: "Software Developer Intern",
     description:
-      "Contributed to the development of a management web application by building core back-end modules and data services for user, sales, purchase, and transport management. Collaborated closely with a team to adapt to client requirements, delivering scalable, maintainable, and user-focused solutions.",
+      "Contributed to the development of a management web application by building core back-end modules and data services for user, sales, purchase, and transport management modules. Collaborated closely with a team to adapt to client requirements, delivering scalable, maintainable, and user-focused solutions.",
     workedfrom: "August '24",
     workedto: "January '25",
     location: "India",
@@ -53,15 +54,20 @@ const companydetails: WorkedCompanies[] = [
         icon: SiPostgresql,
         color: "#336791",
       },
+      {
+        name: "PostMan",
+        icon: SiPostman,
+        color: "#FF6C37",
+      },
     ],
   },
 ];
 
 export default function WorkExp() {
   return (
-    <div className="relative pt-12 pb-10 sm:pt-3">
+    <div className="relative pt-10 pb-8 sm:pt-3">
       <div className="pointer-events-none absolute -right-7 bottom-0 -left-7 h-px border-b border-dashed border-neutral-300 dark:border-neutral-200/20" />
-      <p className="py-4 text-xl font-semibold tracking-tight text-neutral-800 md:text-2xl dark:text-neutral-100">
+      <p className="py-4 text-lg font-semibold tracking-tight text-neutral-800 md:text-xl dark:text-neutral-100">
         Work Experience
       </p>
       {companydetails.map((company, index) => (

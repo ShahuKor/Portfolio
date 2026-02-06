@@ -18,7 +18,7 @@ export default function NotFound() {
             Sorry, I am still working on this, this will be available very soon!
           </p>
           <p>
-            Till then you can checkout my{" "}
+            Untill then you can checkout my{" "}
             <span>
               {links.map((link, index) => (
                 <a

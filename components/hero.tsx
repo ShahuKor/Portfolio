@@ -10,8 +10,8 @@ export const Hero = () => {
         </h1>
 
         <p className="max-w-lg pt-7 text-sm font-medium tracking-wide text-(--color-secondary) md:text-base">
-          I build stuff to see if it’s possible. I enjoy coding and building
-          things, with most of my work focused on
+          I am a Master's student in Computer Science at UCD Dublin. I enjoy
+          coding and building things, with most of my work focused on
           <span className="px-1.5 font-medium text-(--color-primary)">
             full-stack development.
           </span>
@@ -27,12 +27,17 @@ export const Hero = () => {
       </div>
 
       <div className="mt-6 flex gap-2">
-        <button className="rounded-md border border-neutral-200 px-3 py-1.5 text-xs font-medium shadow-[inset_0_2px_4px_rgba(0,0,0,0.06)] transition-shadow hover:shadow-[inset_0_2px_4px_rgba(0,0,0,0.12)] md:text-sm dark:border-neutral-300/30 dark:bg-neutral-50/5 dark:shadow-[inset_2px_4px_4px_rgba(255,255,255,0.06)] dark:hover:shadow-[inset_0_2px_4px_rgba(255,255,255,0.12)]">
-          Resume / CV
-        </button>
-        <button className="rounded-md bg-neutral-900 px-3 py-1.5 text-xs font-medium text-neutral-100 transition-colors ease-in-out hover:bg-neutral-700 md:text-sm dark:bg-neutral-300 dark:text-neutral-800 dark:transition-colors dark:ease-in-out dark:hover:bg-neutral-400">
-          Get in Touch
-        </button>
+        <a href="https://drive.google.com/file/d/1wCiIb1oxhyl4zGX1F8ZiOUMbIbNy4KN-/view?usp=sharing">
+          <button className="rounded-md border border-neutral-200 px-3 py-1.5 text-xs font-medium shadow-[inset_0_2px_4px_rgba(0,0,0,0.06)] transition-shadow hover:shadow-[inset_0_2px_4px_rgba(0,0,0,0.12)] md:text-sm dark:border-neutral-300/30 dark:bg-neutral-50/5 dark:shadow-[inset_2px_4px_4px_rgba(255,255,255,0.06)] dark:hover:shadow-[inset_0_2px_4px_rgba(255,255,255,0.12)]">
+            Resume / CV
+          </button>
+        </a>
+
+        <a href="#contact-me">
+          <button className="rounded-md bg-neutral-900 px-3 py-1.5 text-xs font-medium text-neutral-100 transition-colors ease-in-out hover:bg-neutral-700 md:text-sm dark:bg-neutral-300 dark:text-neutral-800 dark:transition-colors dark:ease-in-out dark:hover:bg-neutral-400">
+            Get in Touch
+          </button>
+        </a>
       </div>
       <div className="mt-8 flex gap-3 pl-1">
         <a

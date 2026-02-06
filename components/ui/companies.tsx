@@ -36,7 +36,7 @@ export default function Companies({
       <div className="flex w-full items-center gap-4">
         <Image
           src={logo}
-          className="size-15 rounded-md border border-neutral-300 bg-white md:size-15 dark:border-neutral-200/20"
+          className="size-10 rounded-md border border-neutral-300 bg-white md:size-12 dark:border-neutral-200/20"
           alt="Company Logo"
           height={60}
           width={60}
@@ -47,7 +47,7 @@ export default function Companies({
         <div className="flex w-full flex-col">
           <div className="flex justify-between">
             <div className="flex w-full items-center justify-between gap-3 sm:justify-normal">
-              <h2 className="text-base font-semibold tracking-tight text-neutral-800 md:text-xl dark:text-neutral-300">
+              <h2 className="text-sm font-semibold tracking-tight text-neutral-800 md:text-base dark:text-neutral-300">
                 {name}
               </h2>
               <button
@@ -76,17 +76,17 @@ export default function Companies({
                 </svg>
               </button>
             </div>
-            <div className="hidden max-w-lg gap-2 text-xs font-medium tracking-wide whitespace-nowrap text-(--color-secondary) sm:flex md:text-base">
+            <div className="hidden max-w-lg gap-2 text-xs font-medium tracking-wide whitespace-nowrap text-(--color-secondary) sm:flex md:text-sm">
               <p>{workedfrom}</p>
               <p>-</p>
               <p>{workedto}</p>
             </div>
           </div>
           <div className="flex justify-between">
-            <h2 className="max-w-lg text-xs font-medium tracking-wide text-(--color-secondary) md:text-base">
+            <h2 className="max-w-lg text-xs font-medium tracking-wide text-(--color-secondary) md:text-sm">
               {role}
             </h2>
-            <p className="hidden max-w-lg text-xs font-medium tracking-wide text-(--color-secondary) sm:block md:text-base">
+            <p className="hidden max-w-lg text-xs font-medium tracking-wide text-(--color-secondary) sm:block md:text-sm">
               {location}
             </p>
           </div>
@@ -101,21 +101,21 @@ export default function Companies({
         }}
       >
         <div className="w-full pt-1 sm:mt-3 sm:pt-2">
-          <div className="flex max-w-full items-center justify-between gap-2 text-xs font-medium tracking-wide text-(--color-secondary) sm:hidden md:text-base">
+          <div className="flex max-w-full items-center justify-between gap-2 text-xs font-medium tracking-wide text-(--color-secondary) sm:hidden md:text-sm">
             <div className="flex items-center gap-2">
               <p>{workedfrom}</p>
               <p>-</p>
               <p>{workedto}</p>
             </div>
-            <p className="max-w-lg py-3 text-xs font-medium tracking-wide text-(--color-secondary) md:text-base">
+            <p className="max-w-lg py-3 text-xs font-medium tracking-wide text-(--color-secondary) md:text-sm">
               {location}
             </p>
           </div>
 
-          <p className="text-base font-semibold tracking-tight text-neutral-800 md:text-lg dark:text-neutral-300">
-            Technologies
+          <p className="text-sm font-semibold tracking-tight text-neutral-800 md:text-base dark:text-neutral-300">
+            Technologies Used
           </p>
-          <div className="mt-3 flex flex-wrap gap-2">
+          <div className="mt-4 flex flex-wrap gap-2">
             {technologiesWorked.map((tech) => (
               <div
                 key={tech.name}
@@ -133,7 +133,7 @@ export default function Companies({
               </div>
             ))}
           </div>
-          <p className="pt-2 text-xs font-medium tracking-wide text-(--color-secondary) md:text-base">
+          <p className="mt-6 text-xs font-medium tracking-wide text-(--color-secondary) md:text-sm">
             {description}
           </p>
         </div>

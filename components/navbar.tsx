@@ -89,17 +89,16 @@ export const Navbar = () => {
           ))}
         </div>
         <button
-          className="hidden rounded-full border border-neutral-400/60 p-0.5 lg:block"
+          className="hidden rounded-full border border-neutral-400 p-0.5 lg:block dark:border-neutral-200"
           onClick={toggleTheme}
         >
           {theme === "light" ? (
-            <CiDark className="h-5 w-5 text-neutral-300" />
+            <CiDark className="h-5 w-5 text-neutral-400" />
           ) : (
-            <LuSunDim className="h-5 w-5 text-neutral-300/50" />
+            <LuSunDim className="h-5 w-5 text-neutral-300" />
           )}
         </button>
 
-        {/* Mobile Menu Button */}
         <button
           className="lg:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -113,7 +112,6 @@ export const Navbar = () => {
         </button>
       </motion.nav>
 
-      {/* Mobile Menu */}
       {menuOpen && (
         <motion.div
           initial={{ opacity: 0 }}
