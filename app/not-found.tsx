@@ -13,7 +13,7 @@ export default function NotFound() {
       <Container className="relative flex min-h-screen items-center justify-center px-8 md:pt-20 md:pb-10">
         <div className="pointer-events-none absolute top-0 bottom-0 left-0 w-px border border-dashed border-neutral-200 dark:border-neutral-200/20" />
         <div className="pointer-events-none absolute top-0 right-0 bottom-0 w-px border border-dashed border-neutral-200 dark:border-neutral-200/20" />
-        <div className="text-md flex flex-col items-center font-medium tracking-wide text-(--color-secondary)">
+        <div className="flex flex-col items-center text-base font-medium tracking-wide text-(--color-secondary)">
           <p>
             Sorry, I am still working on this, this will be available very soon!
           </p>

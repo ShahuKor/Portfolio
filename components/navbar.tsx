@@ -126,7 +126,7 @@ export const Navbar = () => {
               <Link
                 href={item.href}
                 key={index}
-                className="text-md font-medium md:text-lg"
+                className="text-base font-medium md:text-lg"
                 onClick={() => setMenuOpen(false)}
               >
                 {item.title}

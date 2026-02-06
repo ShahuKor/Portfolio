@@ -17,7 +17,7 @@ export default function Footer() {
             <Link
               href={footer.href}
               key={index}
-              className="text-md underline-(--color-secondary) font-medium tracking-wide text-(--color-secondary) hover:underline"
+              className="underline-(--color-secondary) text-base font-medium tracking-wide text-(--color-secondary) hover:underline"
             >
               {footer.title}
             </Link>

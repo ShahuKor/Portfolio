@@ -35,7 +35,7 @@ export const Technologies = () => {
     <div className="relative mt-15 flex h-48 flex-col justify-center pb-3 sm:mt-8 sm:h-45 lg:mt-4">
       <div className="pointer-events-none absolute -top-8 -right-7 -left-7 h-px border-t border-dashed border-neutral-300 sm:top-0 dark:border-neutral-200/20" />
       <div className="pointer-events-none absolute -right-7 -bottom-8 -left-7 h-px border-b border-dashed border-neutral-300 sm:bottom-0 dark:border-neutral-200/20" />
-      <div className="md:text-md text-sm font-medium text-neutral-500 italic dark:text-neutral-300">
+      <div className="text-sm font-medium text-neutral-500 italic md:text-base dark:text-neutral-300">
         What I Build With ?{" "}
       </div>
       <div className="mt-3 flex flex-wrap gap-2">

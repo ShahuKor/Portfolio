@@ -59,9 +59,9 @@ const companydetails: WorkedCompanies[] = [
 
 export default function WorkExp() {
   return (
-    <div className="relative pt-3 pb-10">
+    <div className="relative pt-12 pb-10 sm:pt-3">
       <div className="pointer-events-none absolute -right-7 bottom-0 -left-7 h-px border-b border-dashed border-neutral-300 dark:border-neutral-200/20" />
-      <p className="py-4 text-2xl font-semibold tracking-tight text-neutral-800 dark:text-neutral-100">
+      <p className="py-4 text-xl font-semibold tracking-tight text-neutral-800 md:text-2xl dark:text-neutral-100">
         Work Experience
       </p>
       {companydetails.map((company, index) => (

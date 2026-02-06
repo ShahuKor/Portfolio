@@ -4,12 +4,12 @@ import { Technologies } from "./technologies";
 export const Hero = () => {
   return (
     <div className="pt-16">
-      <div className="mt-20">
-        <h1 className="text-2xl font-bold text-(--color-primary) md:text-4xl">
+      <div className="mt-15 md:mt-0">
+        <h1 className="text-3xl font-bold text-(--color-primary) md:text-4xl">
           Hello! I'm Shahu Kor.
         </h1>
 
-        <p className="md:text-md max-w-lg pt-7 text-sm font-medium tracking-wide text-(--color-secondary)">
+        <p className="max-w-lg pt-7 text-sm font-medium tracking-wide text-(--color-secondary) md:text-base">
           I build stuff to see if it’s possible. I enjoy coding and building
           things, with most of my work focused on
           <span className="px-1.5 font-medium text-(--color-primary)">
