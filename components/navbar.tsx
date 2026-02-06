@@ -7,6 +7,8 @@ import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { useTheme } from "next-themes";
 import { LuSunDim } from "react-icons/lu";
 import { CiDark } from "react-icons/ci";
+import { HiMenuAlt3 } from "react-icons/hi";
+import { IoClose } from "react-icons/io5";
 
 export const Navbar = () => {
   const navItems = [
@@ -22,6 +24,7 @@ export const Navbar = () => {
   const { scrollY } = useScroll();
   const [scrolled, setScrolled] = useState<boolean>(false);
   const [mounted, setMounted] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleTheme = () => {
     if (theme === "light") {
@@ -51,14 +54,8 @@ export const Navbar = () => {
       <motion.nav
         animate={{
           boxShadow: scrolled ? "var(--shadow-custom)" : "none",
-          width: scrolled ? "55%" : "100%",
-          y: scrolled ? 10 : 0,
         }}
-        transition={{
-          duration: 0.4,
-          ease: "easeInOut",
-        }}
-        className="fixed inset-x-0 top-0 z-50 mx-auto flex max-w-4xl items-center justify-between rounded-full px-8 py-2 backdrop-blur-sm"
+        className="fixed inset-x-0 top-0 z-50 mx-auto flex max-w-4xl items-center justify-between px-8 py-2 backdrop-blur-sm"
       >
         <Link href={"/"}>
           <Image
@@ -72,7 +69,7 @@ export const Navbar = () => {
           />
         </Link>
 
-        <div className="flex items-center justify-center">
+        <div className="hidden items-center justify-center lg:flex">
           {navItems.map((item, index) => (
             <Link
               href={item.href}
@@ -92,7 +89,7 @@ export const Navbar = () => {
           ))}
         </div>
         <button
-          className="rounded-full border border-neutral-400/60 p-0.5"
+          className="hidden rounded-full border border-neutral-400/60 p-0.5 lg:block"
           onClick={toggleTheme}
         >
           {theme === "light" ? (
@@ -101,7 +98,53 @@ export const Navbar = () => {
             <LuSunDim className="h-5 w-5 text-neutral-300/50" />
           )}
         </button>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="lg:hidden"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          {menuOpen ? (
+            <IoClose className="h-6 w-6" />
+          ) : (
+            <HiMenuAlt3 className="h-6 w-6" />
+          )}
+        </button>
       </motion.nav>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-white lg:hidden dark:bg-black"
+        >
+          <div className="flex flex-col items-center gap-8">
+            {navItems.map((item, index) => (
+              <Link
+                href={item.href}
+                key={index}
+                className="text-2xl font-medium"
+                onClick={() => setMenuOpen(false)}
+              >
+                {item.title}
+              </Link>
+            ))}
+            <button
+              className="rounded-full border border-neutral-400/60 p-2"
+              onClick={toggleTheme}
+            >
+              {theme === "light" ? (
+                <CiDark className="h-6 w-6" />
+              ) : (
+                <LuSunDim className="h-6 w-6" />
+              )}
+            </button>
+          </div>
+        </motion.div>
+      )}
     </Container>
   );
 };
