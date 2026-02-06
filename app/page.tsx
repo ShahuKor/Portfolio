@@ -7,10 +7,10 @@ import WorkExp from "@/components/work-experience";
 
 export default function Home() {
   return (
-    <div>
+    <div className="">
       <Container className="relative min-h-screen px-8 md:pt-20 md:pb-10">
-        <div className="pointer-events-none absolute top-0 bottom-0 left-0 w-px border border-dashed border-neutral-200 dark:border-neutral-200/20" />
-        <div className="pointer-events-none absolute top-0 right-0 bottom-0 w-px border border-dashed border-neutral-200 dark:border-neutral-200/20" />
+        <div className="pointer-events-none absolute top-0 bottom-0 left-0 hidden w-px border border-dashed border-neutral-200 md:block dark:border-neutral-200/20" />
+        <div className="pointer-events-none absolute top-0 right-0 bottom-0 hidden w-px border border-dashed border-neutral-200 md:block dark:border-neutral-200/20" />
         <Hero />
         <WorkExp />
         <Projects />

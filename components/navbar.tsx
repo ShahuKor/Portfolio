@@ -126,7 +126,7 @@ export const Navbar = () => {
               <Link
                 href={item.href}
                 key={index}
-                className="text-2xl font-medium"
+                className="text-md font-medium md:text-lg"
                 onClick={() => setMenuOpen(false)}
               >
                 {item.title}
@@ -137,9 +137,9 @@ export const Navbar = () => {
               onClick={toggleTheme}
             >
               {theme === "light" ? (
-                <CiDark className="h-6 w-6" />
+                <CiDark className="h-4 w-4 md:h-6 md:w-6" />
               ) : (
-                <LuSunDim className="h-6 w-6" />
+                <LuSunDim className="h-4 w-4 md:h-6 md:w-6" />
               )}
             </button>
           </div>

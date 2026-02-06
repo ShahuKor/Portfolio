@@ -32,10 +32,10 @@ const technologies = [
 
 export const Technologies = () => {
   return (
-    <div className="relative mt-4 flex h-40 flex-col justify-center pb-3">
-      <div className="pointer-events-none absolute top-0 -right-7 -left-7 h-px border-t border-dashed border-neutral-300 dark:border-neutral-200/20" />
-      <div className="pointer-events-none absolute -right-7 bottom-0 -left-7 h-px border-b border-dashed border-neutral-300 dark:border-neutral-200/20" />
-      <div className="font-medium text-neutral-500 italic dark:text-neutral-300">
+    <div className="relative mt-15 flex h-48 flex-col justify-center pb-3 sm:mt-8 sm:h-45 lg:mt-4">
+      <div className="pointer-events-none absolute -top-8 -right-7 -left-7 h-px border-t border-dashed border-neutral-300 sm:top-0 dark:border-neutral-200/20" />
+      <div className="pointer-events-none absolute -right-7 -bottom-8 -left-7 h-px border-b border-dashed border-neutral-300 sm:bottom-0 dark:border-neutral-200/20" />
+      <div className="md:text-md text-sm font-medium text-neutral-500 italic dark:text-neutral-300">
         What I Build With ?{" "}
       </div>
       <div className="mt-3 flex flex-wrap gap-2">
@@ -44,19 +44,19 @@ export const Technologies = () => {
             key={tech.name}
             className="skill-inner-shadow inline-flex items-center self-end rounded-md border border-dashed border-black/20 bg-black/5 px-2 py-1 text-sm text-black dark:border-white/30 dark:bg-white/15 dark:text-white"
           >
-            <div className="size-4 shrink-0">
+            <div className="size-3.5 shrink-0 md:size-4">
               <tech.Icon
                 className="h-full w-full"
                 style={{ color: tech.color }}
               />
             </div>
-            <p className="ml-1 text-sm font-medium text-neutral-700 dark:text-neutral-300/80">
+            <p className="ml-1 text-xs font-medium text-neutral-700 md:text-sm dark:text-neutral-300/80">
               {tech.name}
             </p>
           </div>
         ))}
         <div className="skill-inner-shadow inline-flex items-center self-end rounded-md border border-dashed border-black/20 bg-black/5 px-2 py-1 text-sm text-black dark:border-white/30 dark:bg-white/15 dark:text-white">
-          <p className="ml-1 text-sm font-medium text-neutral-700 dark:text-neutral-300/80">
+          <p className="ml-1 text-xs font-medium text-neutral-700 md:text-sm dark:text-neutral-300/80">
             More...
           </p>
         </div>

@@ -4,31 +4,33 @@ import { Technologies } from "./technologies";
 export const Hero = () => {
   return (
     <div className="pt-16">
-      <h1 className="text-4xl font-bold text-(--color-primary)">
-        Hello! I'm Shahu Kor.
-      </h1>
+      <div className="mt-20">
+        <h1 className="text-2xl font-bold text-(--color-primary) md:text-4xl">
+          Hello! I'm Shahu Kor.
+        </h1>
 
-      <p className="text-md max-w-lg pt-7 font-medium tracking-wide text-(--color-secondary)">
-        I build stuff to see if it’s possible. I enjoy coding and building
-        things, with most of my work focused on
-        <span className="px-1.5 font-medium text-(--color-primary)">
-          full-stack development.
-        </span>
-        But theres{" "}
-        <Link
-          href="/experiments"
-          className="text-(--color-primary) underline decoration-neutral-500"
-        >
-          more to it
-        </Link>
-        .
-      </p>
+        <p className="md:text-md max-w-lg pt-7 text-sm font-medium tracking-wide text-(--color-secondary)">
+          I build stuff to see if it’s possible. I enjoy coding and building
+          things, with most of my work focused on
+          <span className="px-1.5 font-medium text-(--color-primary)">
+            full-stack development.
+          </span>
+          But theres{" "}
+          <Link
+            href="/experiments"
+            className="text-(--color-primary) underline decoration-neutral-500"
+          >
+            more to it
+          </Link>
+          .
+        </p>
+      </div>
 
       <div className="mt-6 flex gap-2">
-        <button className="rounded-md border border-neutral-200 px-3 py-1.5 text-sm font-medium shadow-[inset_0_2px_4px_rgba(0,0,0,0.06)] transition-shadow hover:shadow-[inset_0_2px_4px_rgba(0,0,0,0.12)] dark:border-neutral-300/30 dark:bg-neutral-50/5 dark:shadow-[inset_2px_4px_4px_rgba(255,255,255,0.06)] dark:hover:shadow-[inset_0_2px_4px_rgba(255,255,255,0.12)]">
+        <button className="rounded-md border border-neutral-200 px-3 py-1.5 text-xs font-medium shadow-[inset_0_2px_4px_rgba(0,0,0,0.06)] transition-shadow hover:shadow-[inset_0_2px_4px_rgba(0,0,0,0.12)] md:text-sm dark:border-neutral-300/30 dark:bg-neutral-50/5 dark:shadow-[inset_2px_4px_4px_rgba(255,255,255,0.06)] dark:hover:shadow-[inset_0_2px_4px_rgba(255,255,255,0.12)]">
           Resume / CV
         </button>
-        <button className="rounded-md bg-neutral-900 px-3 py-1.5 text-sm font-medium text-neutral-100 transition-colors ease-in-out hover:bg-neutral-700 dark:bg-neutral-300 dark:text-neutral-800 dark:transition-colors dark:ease-in-out dark:hover:bg-neutral-400">
+        <button className="rounded-md bg-neutral-900 px-3 py-1.5 text-xs font-medium text-neutral-100 transition-colors ease-in-out hover:bg-neutral-700 md:text-sm dark:bg-neutral-300 dark:text-neutral-800 dark:transition-colors dark:ease-in-out dark:hover:bg-neutral-400">
           Get in Touch
         </button>
       </div>
@@ -41,7 +43,7 @@ export const Hero = () => {
           data-slot="tooltip-trigger"
           href="https://x.com/ShahuKor"
         >
-          <span className="size-6">
+          <span className="size-4 sm:size-5 md:size-6">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -63,7 +65,7 @@ export const Hero = () => {
           data-slot="tooltip-trigger"
           href="https://www.linkedin.com/in/shahukor"
         >
-          <span className="size-6">
+          <span className="size-4 sm:size-5 md:size-6">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -85,7 +87,7 @@ export const Hero = () => {
           data-slot="tooltip-trigger"
           href="https://github.com/ShahuKor"
         >
-          <span className="size-6">
+          <span className="size-4 sm:size-5 md:size-6">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -107,7 +109,7 @@ export const Hero = () => {
           data-slot="tooltip-trigger"
           href="https://medium.com/@ShahuKor"
         >
-          <span className="size-6">
+          <span className="size-4 sm:size-5 md:size-6">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -129,7 +131,7 @@ export const Hero = () => {
           data-slot="tooltip-trigger"
           href="mailto:korshahu17@gmail.com"
         >
-          <span className="size-6">
+          <span className="size-4 sm:size-5 md:size-6">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
