@@ -15,9 +15,9 @@ export const Hero = () => {
           <span className="px-1.5 font-medium text-(--color-primary)">
             full-stack development.
           </span>
-          But theres{" "}
+          But there's{" "}
           <Link
-            href="/experiments"
+            href="/about-me"
             className="text-(--color-primary) underline decoration-neutral-500"
           >
             more to it
