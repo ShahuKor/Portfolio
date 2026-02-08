@@ -9,9 +9,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Shahu Kor Portfolio Website",
+  title: "Shahu Kor | Full-Stack Web Devloper",
   description:
-    "Portfolio of Shahu Kor, a developer highlighting web projects, technologies, and professional experience.",
+    "Full-stack developer experienced in React, Next.js, Node.js, AWS, and cloud-native systems. Exploring distributed systems and scalable software design.",
 };
 
 export default function RootLayout({
