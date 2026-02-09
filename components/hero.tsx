@@ -27,7 +27,7 @@ export const Hero = () => {
       </div>
 
       <div className="mt-6 flex gap-2">
-        <a href="https://drive.google.com/file/d/1wCiIb1oxhyl4zGX1F8ZiOUMbIbNy4KN-/view?usp=sharing">
+        <a href="https://drive.google.com/file/d/1ZpPllkdoxngWrRbdEeqr331gSUYN0bBI/view?usp=sharing">
           <button className="rounded-md border border-neutral-200 px-3 py-1.5 text-xs font-medium shadow-[inset_0_2px_4px_rgba(0,0,0,0.06)] transition-shadow hover:shadow-[inset_0_2px_4px_rgba(0,0,0,0.12)] md:text-sm dark:border-neutral-300/30 dark:bg-neutral-50/5 dark:shadow-[inset_2px_4px_4px_rgba(255,255,255,0.06)] dark:hover:shadow-[inset_0_2px_4px_rgba(255,255,255,0.12)]">
             Resume / CV
           </button>
