@@ -7,7 +7,7 @@ interface CardProps {
   src: string;
   title: string;
   description: string;
-  projectlink: string;
+  slug: string;
   githublink: string;
   livelink?: string | null;
 }
@@ -16,7 +16,7 @@ export default function Card({
   src,
   title,
   description,
-  projectlink,
+  slug,
   githublink,
   livelink,
 }: CardProps) {
@@ -60,7 +60,7 @@ export default function Card({
 
       <div className="flex items-center justify-between px-4 pb-7">
         <Link
-          href={projectlink}
+          href={`/projects/${slug}`}
           className="text-xs text-neutral-800 underline-offset-4 hover:underline md:text-sm dark:text-neutral-200"
         >
           View Details →

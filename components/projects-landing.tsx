@@ -6,45 +6,45 @@ interface Project {
 
   title: string;
   description: string;
-  projectlink: string;
+  slug: string;
   githublink: string;
   livelink?: string | null;
 }
 
 const projects: Project[] = [
   {
+    src: "/foodflux-image-new.jpg",
+    title: "FoodFlux",
+    description:
+      "A completely distributed microservices system demonstrating food delivery services and inter-service communication.",
+    slug: "foodflux",
+    githublink:
+      "https://github.com/ShahuKor/FoodFlux-Distributed-Food-Ordering",
+  },
+  {
     src: "/quib-image-new.jpg",
     title: "Quib",
     description:
       "A PDF Summarizer that converts any pdf into reels like componenet, which makes it user friendly and interactive. ",
-    projectlink: "/projects/ecommerce",
+    slug: "quib",
     githublink: "https://github.com/ShahuKor/Quib",
+  },
+  {
+    src: "/cutthatpart-image.jpg",
+    title: "CutThatPart",
+    description:
+      "Share parts of a YouTube videos instantly without downloading it or screen recording, with a personal share link.",
+    slug: "cutthatpart",
+    githublink: "https://github.com/ShahuKor/CutThatPart",
   },
   {
     src: "/cliply-image-new.jpg",
     title: "Cliply",
     description:
       "AI-powered platform to crop images for social formats, compress videos with minimal quality loss.",
-    projectlink: "/projects/task-app",
+    slug: "cliply",
     githublink: "https://github.com/ShahuKor/About-Cliply",
     livelink: "https://cliply-kohl.vercel.app/",
-  },
-  {
-    src: "/foodflux-image-new.jpg",
-    title: "FoodFlux",
-    description:
-      "A completely distributed microservices system demonstrating food delivery services and inter-service communication.",
-    projectlink: "/projects/task-app",
-    githublink:
-      "https://github.com/ShahuKor/FoodFlux-Distributed-Food-Ordering",
-  },
-  {
-    src: "/webchat-ai-image-new.jpg",
-    title: "WebChat AI",
-    description:
-      "A RAG chatbot that makes chatgpt get context of any url or website, built with Streamlit and LangChain.",
-    projectlink: "/projects/task-app",
-    githublink: "https://github.com/ShahuKor/WebChat-Ai",
   },
 ];
 
@@ -63,7 +63,7 @@ export const Projects = () => {
               src={project.src}
               title={project.title}
               description={project.description}
-              projectlink={project.projectlink}
+              slug={project.slug}
               githublink={project.githublink}
               livelink={project?.livelink}
             />

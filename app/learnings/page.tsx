@@ -43,11 +43,11 @@ const learned: RecentLearnings[] = [
 
 export default function Page() {
   return (
-    <div className="pt-30 md:pt-20">
+    <div className="">
       <Container className="relative min-h-screen px-8 md:pt-20 md:pb-10">
         <div className="pointer-events-none absolute top-0 bottom-0 left-0 hidden w-px border border-dashed border-neutral-200 md:block dark:border-neutral-200/20" />
         <div className="pointer-events-none absolute top-0 right-0 bottom-0 hidden w-px border border-dashed border-neutral-200 md:block dark:border-neutral-200/20" />
-        <h2 className="text-lg font-semibold tracking-tight text-neutral-800 underline md:text-2xl dark:text-neutral-100">
+        <h2 className="pt-30 text-lg font-semibold tracking-tight text-neutral-800 underline md:pt-20 md:text-2xl dark:text-neutral-100">
           Learnings
         </h2>
         <div className="mt-4 mb-2">
