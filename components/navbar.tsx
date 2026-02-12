@@ -15,7 +15,7 @@ export const Navbar = () => {
     { title: "About Me", href: "/about-me" },
     { title: "Projects", href: "/projects" },
     { title: "Learnings", href: "/learnings" },
-    { title: "Blog", href: "/blog" },
+    { title: "Blog", href: "/blogs" },
   ];
 
   const { theme, setTheme } = useTheme();

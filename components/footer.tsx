@@ -5,7 +5,7 @@ export default function Footer() {
     { title: "About Me", href: "/about-me" },
     { title: "Projects", href: "/projects" },
     { title: "Learnings", href: "/learnings" },
-    { title: "Blog", href: "/blog" },
+    { title: "Blog", href: "/blogs" },
   ];
   return (
     <div className="py-20">
