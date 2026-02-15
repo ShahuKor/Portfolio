@@ -32,7 +32,7 @@ const companydetails: WorkedCompanies[] = [
     name: "TechNetz Solutions",
     role: "Software Developer Intern",
     description:
-      "Contributed to the development of a management web application by building core back-end modules and data services for user, sales, purchase, and transport management modules. Collaborated closely with a team to adapt to client requirements, delivering scalable, maintainable, and user-focused solutions.",
+      "Developed core backend modules for a business management system using Node.js, Express, and PostgreSQL. Designed RESTful APIs across user, sales, purchase, and transport domains, implementing Role-Based Access Control (RBAC) for secure, role-level authorization. Structured database-driven services with emphasis on transactional integrity, scalability, and maintainable architecture.",
     workedfrom: "August '24",
     workedto: "January '25",
     location: "India",

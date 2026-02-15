@@ -94,7 +94,7 @@ export default function Page() {
         </div>
 
         <div className="relative py-10">
-          <div className="pointer-events-none absolute -top-0 -right-7 -left-7 h-px border-t border-dashed border-neutral-300 sm:top-0 dark:border-neutral-200/20" />
+          <div className="pointer-events-none absolute top-0 -right-7 -left-7 h-px border-t border-dashed border-neutral-300 sm:top-0 dark:border-neutral-200/20" />
           <div className="pointer-events-none absolute -right-7 bottom-0 -left-7 h-px border-b border-dashed border-neutral-300 dark:border-neutral-200/20" />
           <div className="flex flex-col items-center">
             <div className="grid grid-cols-1 gap-6 py-4 md:grid-cols-2">

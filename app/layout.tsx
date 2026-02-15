@@ -9,9 +9,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Shahu Kor | Full-Stack Web Devloper",
+  title: "Shahu Kor | Full-Stack & Backend Developer",
   description:
-    "Full-stack developer experienced in React, Next.js, Node.js, AWS, and cloud-native systems. Exploring distributed systems and scalable software design.",
+    "Shahu Kor (Shahu Abhay Kor) is a full-stack and backend developer based in Dublin, specializing in Node.js, Next.js, PostgreSQL, AWS, and scalable system design. Passionate about distributed systems, backend architecture, and building production-grade web applications.",
 };
 
 export default function RootLayout({
