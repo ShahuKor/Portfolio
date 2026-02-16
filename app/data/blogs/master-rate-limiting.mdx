@@ -122,10 +122,17 @@ When a new request comes in, the algorithm trims any timestamps older than the w
 
 Because the window always anchors to right now rather than a fixed clock boundary, there's no seam to exploit. The rate limit holds consistently no matter when requests arrive.
 
-To make it concrete: say the limit is 3 per second and requests came in at `t=0.5s`, `t=0.8s`, and `t=0.9s`. A new request arrives at `t=1.1s`. The timestamp at `t=0.5s` is now more than 1 second old, so it gets removed. The log has 2 entries. Request goes through.
+To make it concrete: say the limit is 3 per second and requests came in at `t=0.5s`, `t=0.8s`, and `t=0.9s`. A new request arrives at `t=1.1s`. The rolling window looks back to `t=0.1s`, all three timestamps are still inside it, so the log has 3 entries and the request is **rejected**.
 
 <img
-  src="/blogs/rate-limiting/wlog.png"
+  src="/blogs/rate-limiting/swlog2.png"
+  alt="Sliding Window Log, rolling 1-second window anchored to current time, timestamp log being trimmed and counted on each new request"
+/>
+
+Now say the request arrives at `t=1.6s` instead. The window now looks back to `t=0.6s`. The entry at `t=0.5s` is outside the window and gets evicted. The log has 2 entries, which is under the limit, so the request goes through.
+
+<img
+  src="/blogs/rate-limiting/swlog.png"
   alt="Sliding Window Log, rolling 1-second window anchored to current time, timestamp log being trimmed and counted on each new request"
 />
 
