@@ -46,7 +46,7 @@ export const projects = [
     ],
   },
   {
-    src: "/quib-image-new.jpg",
+    src: "/quib-neww.png",
     title: "Quib",
     description:
       "A production-ready SaaS platform that converts PDFs into interactive, reels-style summaries for a modern and engaging learning experience.",
@@ -89,13 +89,13 @@ export const projects = [
     ],
   },
   {
-    src: "/cutthatpart-image.jpg",
+    src: "/cutthatpart-new.png",
     title: "CutThatPart",
     description:
       "Share parts of a YouTube videos instantly without downloading it or screen recording, with a personal share link.",
     slug: "cutthatpart",
     githublink: "https://github.com/ShahuKor/CutThatPart",
-    status: "Developing",
+    status: "Completed",
     type: "Full Stack",
     overview:
       "CutThatPart is a web app that lets users share only a specific portion of a YouTube video instead of sending the entire video or screen recording it. Users paste a YouTube URL, select the start and end timestamps, and the app processes and generates a shareable video link with a clean viewing interface. It simplifies video clipping and sharing while handling video processing efficiently on the backend.",
@@ -135,7 +135,7 @@ export const projects = [
     ],
   },
   {
-    src: "/cliply-image-new.jpg",
+    src: "/cliply-neww.png",
     title: "Cliply",
     description:
       "An AI-powered media optimization & sharing platform with contextual image cropping, smart video compression, and a public showcase wall.",

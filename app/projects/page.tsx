@@ -36,7 +36,7 @@ const projects: Project[] = [
       "https://github.com/ShahuKor/FoodFlux-Distributed-Food-Ordering",
   },
   {
-    src: "/quib-image-new.jpg",
+    src: "/quib-neww.png",
     title: "Quib",
     description:
       "A PDF Summarizer that converts any pdf into reels like componenet, which makes it user friendly and interactive. ",
@@ -44,7 +44,7 @@ const projects: Project[] = [
     githublink: "https://github.com/ShahuKor/Quib",
   },
   {
-    src: "/cutthatpart-image.jpg",
+    src: "/cutthatpart-new.png",
     title: "CutThatPart",
     description:
       "Share parts of a YouTube videos instantly without downloading it or screen recording, with a personal share link.",
@@ -52,7 +52,7 @@ const projects: Project[] = [
     githublink: "https://github.com/ShahuKor/CutThatPart",
   },
   {
-    src: "/cliply-image-new.jpg",
+    src: "/cliply-neww.png",
     title: "Cliply",
     description:
       "AI-powered platform to crop images for social formats, compress videos with minimal quality loss.",
