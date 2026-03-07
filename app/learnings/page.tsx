@@ -12,7 +12,7 @@ interface RecentLearnings {
   src: string;
   title: string;
   description: string;
-  implementationlink: string;
+  implementationlink?: string;
   bloglink?: string | null;
 }
 
@@ -24,6 +24,12 @@ const quotes: QuotesInter[] = [
 ];
 
 const learned: RecentLearnings[] = [
+  {
+    src: "/redis-image.jpg",
+    title: "High-Performance Data Caching Architecture (Redis, Kafka, Streams)",
+    description:
+      "An exploration of distributed caching and streaming patterns where Redis accelerates reads while Kafka handles event flow, improving data access latency, consistency strategies, and scalable backend system performance overall.",
+  },
   {
     src: "/segment-image.jpg",
     title: "Event-Driven Video Transcoding Pipeline (AWS, FFmpeg, ECS)",
@@ -68,7 +74,7 @@ export default function Page() {
               src={learn.src}
               title={learn.title}
               description={learn.description}
-              implementationlink={learn.implementationlink}
+              implementationlink={learn?.implementationlink}
             />
           ))}
         </div>

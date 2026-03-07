@@ -5,7 +5,7 @@ interface LearningsProps {
   src: string;
   title: string;
   description: string;
-  implementationlink: string;
+  implementationlink?: string;
   bloglink?: string | null;
 }
 
@@ -36,12 +36,14 @@ export default function Learnings({
           <p className="flex-wrap text-xs font-medium text-(--color-secondary) md:text-sm lg:text-base">
             {description}
           </p>
-          <Link
-            href={implementationlink}
-            className="text-xs text-neutral-800 underline-offset-4 hover:underline md:text-xs lg:text-sm dark:text-neutral-200"
-          >
-            View Implementation →
-          </Link>
+          {implementationlink && (
+            <Link
+              href={implementationlink}
+              className="text-xs text-neutral-800 underline-offset-4 hover:underline md:text-xs lg:text-sm dark:text-neutral-200"
+            >
+              View Implementation →
+            </Link>
+          )}
         </div>
       </div>
     </div>
