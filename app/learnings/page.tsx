@@ -25,6 +25,13 @@ const quotes: QuotesInter[] = [
 
 const learned: RecentLearnings[] = [
   {
+    src: "/agentic2.jpg",
+    title: "Building and Orchestrating Multi-Agent AI Systems",
+    description:
+      "Recently, I’ve been exploring how to design and build AI agents, with a focus on developing multi-agent systems. I’ve gained hands-on experience implementing patterns such as handoff and manager architectures, and have also explored areas like guardrails, security, chat thread context management, and streaming LLM responses, among others.",
+    implementationlink: "https://github.com/ShahuKor/AgenticAISamples",
+  },
+  {
     src: "/redis-image.jpg",
     title: "High-Performance Data Caching Architecture (Redis, Kafka, Streams)",
     description:
@@ -65,7 +72,7 @@ export default function Page() {
           Continuous learning is core to my growth as a developer.
         </h3>
         <h3 className="mt-10 text-sm font-medium tracking-wide text-(--color-secondary) italic md:text-base">
-          Here's what I have been learning recently
+          Here's what I have learnt recently,
         </h3>
         <div className="relative">
           {learned.map((learn, index) => (
