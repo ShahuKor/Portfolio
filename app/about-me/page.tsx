@@ -44,25 +44,23 @@ export default function Page() {
             About Me
           </h2>
           <p className="w-full py-4 text-sm font-medium tracking-wide text-neutral-600 md:text-base dark:text-neutral-400">
-            I’m a software engineer who enjoys building things end-to-end and
-            understanding how systems work under the hood. I work mainly with
-            TypeScript and JavaScript, building full-stack web applications
-            using React, Next.js, Node.js, and modern backend architectures.
-            <br></br> <br></br> I have hands-on experience with AWS and
-            cloud-native development working with services like EC2, S3, Lambda
-            (serverless), SQS, ECS, and ECR, along with Docker and Kubernetes
-            for containerized deployments. I like taking ideas from zero to a
-            working MVP, focusing on clean code, scalability, and real-world
-            constraints. <br></br> <br></br> What really drives me is
-            engineering problem-solving at scale. I actively study distributed
-            systems, system design, and software architecture, and I try to
-            apply what I learn by building and experimenting almost every day. I
-            enjoy breaking systems apart, understanding trade-offs, and putting
-            things back together in better ways.<br></br> <br></br> Outside of
-            coding, I love writing technical blogs, documenting what I learn,
-            and constantly exploring new technologies. I see myself as a
-            lifelong learner who’s curious about how large-scale systems are
-            designed, built, and evolved over time.
+            I'm a software engineer who enjoys building things end-to-end and
+            understanding how systems work under the hood. My focus is
+            full-stack development and distributed backend systems, working
+            mainly with TypeScript, Node.js, React, and Next.js, from APIs to
+            event-driven architectures. <br></br> <br></br> Lately I've been
+            into the AI engineering space building agentic systems, RAG
+            pipelines, and MCP-based tooling. I find the intersection of LLMs
+            and real software architecture genuinely interesting, I have built
+            multiple projects around it and thats what really excites me.
+            <br></br> <br></br> What is more interesting to me is engineering
+            problem-solving at scale. I actively study distributed systems and
+            system design, and I try to apply what I learn by building things
+            rather than just reading about them. I'm currently finishing my MSc
+            in Computer Science at University College Dublin and interning at
+            Spanish Point Technologies in Dublin.<br></br> <br></br> Outside of
+            all this, I play keyboard, jam to music, and watch a lot of movies
+            and Youtube, a good balance to staring at terminals all day :)
           </p>
         </div>
         <div className="relative flex flex-col gap-3 pt-4 pb-8">

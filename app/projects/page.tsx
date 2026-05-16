@@ -27,13 +27,29 @@ interface Project {
 
 const projects: Project[] = [
   {
-    src: "/foodflux-image-new.jpg",
-    title: "FoodFlux",
+    src: "/diffsense-landing.png",
+    title: "DiffSense",
     description:
-      "A completely distributed microservices system demonstrating food delivery services and inter-service communication.",
-    slug: "foodflux",
-    githublink:
-      "https://github.com/ShahuKor/FoodFlux-Distributed-Food-Ordering",
+      "A self-hostable AI Agent that reviews pull requests using an agentic Claude AI loop with RAG-based adaptive feedback.",
+    slug: "diffsense",
+    githublink: "https://github.com/ShahuKor/DiffSense",
+    livelink: "https://diffsense-landing.vercel.app/",
+  },
+  {
+    src: "/cutthatpart-new.png",
+    title: "CutThatPart",
+    description:
+      "Share parts of a YouTube videos instantly without downloading it or screen recording, with a personal share link.",
+    slug: "cutthatpart",
+    githublink: "https://github.com/ShahuKor/CutThatPart",
+  },
+  {
+    src: "/prysm-homepage.png",
+    title: "Prysm",
+    description:
+      "Interact with PDFS get insights, get cited, source-backed answers with a built-in PDF viewer and persistent chat history.",
+    slug: "prysm",
+    githublink: "https://github.com/ShahuKor/PdfRaG",
   },
   {
     src: "/quib-neww.png",
@@ -44,12 +60,13 @@ const projects: Project[] = [
     githublink: "https://github.com/ShahuKor/Quib",
   },
   {
-    src: "/cutthatpart-new.png",
-    title: "CutThatPart",
+    src: "/foodflux-image-new.jpg",
+    title: "FoodFlux",
     description:
-      "Share parts of a YouTube videos instantly without downloading it or screen recording, with a personal share link.",
-    slug: "cutthatpart",
-    githublink: "https://github.com/ShahuKor/CutThatPart",
+      "A completely distributed microservices system demonstrating food delivery services and inter-service communication.",
+    slug: "foodflux",
+    githublink:
+      "https://github.com/ShahuKor/FoodFlux-Distributed-Food-Ordering",
   },
   {
     src: "/cliply-neww.png",

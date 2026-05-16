@@ -16,7 +16,7 @@ interface CompaniesProps {
   workedfrom: string;
   workedto: string;
   location: string;
-  technologiesWorked: Technology[];
+  technologiesWorked?: Technology[];
 }
 
 export default function Companies({
@@ -93,6 +93,7 @@ export default function Companies({
         </div>
       </div>
 
+      {/* Expandable section */}
       <div
         className="overflow-hidden transition-all duration-500 ease-in-out"
         style={{
@@ -101,6 +102,7 @@ export default function Companies({
         }}
       >
         <div className="w-full pt-1 sm:mt-3 sm:pt-2">
+          {/* Mobile-only date + location row */}
           <div className="flex max-w-full items-center justify-between gap-2 text-xs font-medium tracking-wide text-(--color-secondary) sm:hidden md:text-sm">
             <div className="flex items-center gap-2">
               <p>{workedfrom}</p>
@@ -112,28 +114,34 @@ export default function Companies({
             </p>
           </div>
 
-          <p className="text-sm font-semibold tracking-tight text-neutral-800 md:text-base dark:text-neutral-300">
-            Technologies Used
-          </p>
-          <div className="mt-4 flex flex-wrap gap-2">
-            {technologiesWorked.map((tech) => (
-              <div
-                key={tech.name}
-                className="skill-inner-shadow inline-flex items-center self-end rounded-md border border-dashed border-black/20 bg-black/5 px-2 py-1 text-sm text-black dark:border-white/30 dark:bg-white/15 dark:text-white"
-              >
-                <div className="size-3.5 shrink-0 md:size-4">
-                  <tech.icon
-                    className="h-full w-full"
-                    style={{ color: tech.color }}
-                  />
-                </div>
-                <p className="ml-1 text-xs font-medium text-neutral-700 md:text-sm dark:text-neutral-300/80">
-                  {tech.name}
-                </p>
+          {/* Technologies — only rendered when present */}
+          {technologiesWorked && technologiesWorked.length > 0 && (
+            <div className="mb-6">
+              <p className="text-sm font-semibold tracking-tight text-neutral-800 md:text-base dark:text-neutral-300">
+                Technologies Used
+              </p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {technologiesWorked.map((tech) => (
+                  <div
+                    key={tech.name}
+                    className="skill-inner-shadow inline-flex items-center self-end rounded-md border border-dashed border-black/20 bg-black/5 px-2 py-1 text-sm text-black dark:border-white/30 dark:bg-white/15 dark:text-white"
+                  >
+                    <div className="size-3.5 shrink-0 md:size-4">
+                      <tech.icon
+                        className="h-full w-full"
+                        style={{ color: tech.color }}
+                      />
+                    </div>
+                    <p className="ml-1 text-xs font-medium text-neutral-700 md:text-sm dark:text-neutral-300/80">
+                      {tech.name}
+                    </p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-          <p className="mt-6 text-xs font-medium tracking-wide text-(--color-secondary) md:text-sm">
+            </div>
+          )}
+
+          <p className="text-xs font-medium tracking-wide text-(--color-secondary) md:text-sm">
             {description}
           </p>
         </div>

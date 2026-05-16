@@ -4,6 +4,7 @@ import Footer from "@/components/footer";
 import { projects } from "@/lib/projects";
 import Image from "next/image";
 import Link from "next/link";
+import { MdArrowOutward } from "react-icons/md";
 
 interface ProjectPageProps {
   params: {
@@ -69,9 +70,18 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             >
               {project.status}
             </div>
+
             <div className="rounded-lg bg-neutral-800 px-2 py-1 text-xs font-medium text-neutral-100 md:text-sm dark:bg-neutral-200 dark:text-neutral-800">
               {project.type}
             </div>
+            {project?.website && (
+              <Link href={project.website}>
+                <div className="flex items-center gap-2 rounded-lg bg-neutral-800 px-2 py-1 text-xs font-medium text-neutral-100 md:text-sm dark:bg-neutral-200 dark:text-neutral-800">
+                  Go to Website
+                  <MdArrowOutward />
+                </div>
+              </Link>
+            )}
           </div>
           <div className="flex flex-col gap-3 py-5 md:py-10">
             <h2 className="text-3xl font-bold text-(--color-primary) md:text-4xl">
@@ -137,6 +147,30 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               ))}
             </div>
           </div>
+
+          {project.screenshots && project.screenshots.length > 0 && (
+            <div className="mt-6 flex flex-col gap-4 md:mt-10">
+              <h2 className="text-lg font-semibold tracking-tight text-neutral-800 md:text-2xl dark:text-neutral-100">
+                Screengrabs from the project
+              </h2>
+              <div className="grid grid-cols-1 gap-6">
+                {project.screenshots.map((shot, index) => (
+                  <div key={index} className="flex flex-col gap-1.5">
+                    <p className="mt-1 text-xs font-medium text-(--color-secondary) md:mt-5 md:text-sm">
+                      {shot.caption}
+                    </p>
+                    <Image
+                      src={shot.src}
+                      alt={shot.caption}
+                      width={1280}
+                      height={800}
+                      className="w-full rounded-xl border-2 border-neutral-300/50 object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           <div className="mt-10 mb-5 flex w-full justify-center">
             <Link href={project.githublink}>

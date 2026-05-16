@@ -23,16 +23,26 @@ interface WorkedCompanies {
   workedfrom: string;
   workedto: string;
   location: string;
-  technologiesWorked: Technology[];
+  technologiesWorked?: Technology[];
 }
 
 const companydetails: WorkedCompanies[] = [
+  {
+    logo: "/spanishpointlogo.png",
+    name: "Spanish Point Technologies Ltd.",
+    role: "Software Engineering Intern",
+    description:
+      "Contributing to client-facing projects across software development, AI and cloud using Microsoft Azure, TypeScript, Python, and React in an agile delivery environment.",
+    workedfrom: "May '26",
+    workedto: "Present",
+    location: "Dublin",
+  },
   {
     logo: "/Technetzlogo600.png",
     name: "TechNetz Solutions",
     role: "Software Developer Intern",
     description:
-      "Developed core backend modules for a business management system using Node.js, Express, and PostgreSQL. Designed RESTful APIs across user, sales, purchase, and transport domains, implementing Role-Based Access Control (RBAC) for secure, role-level authorization. Structured database-driven services with emphasis on transactional integrity, scalability, and maintainable architecture.",
+      "Worked on backend development for an enterprise resource management platform built with Node.js and PostgreSQL, developing APIs across sales, purchases, transport, and user workflows. Contributed to the platform’s RBAC system for secure role-level authorization and helped build scalable, maintainable backend services in a collaborative production environment.",
     workedfrom: "August '24",
     workedto: "January '25",
     location: "India",
@@ -70,19 +80,21 @@ export default function WorkExp() {
       <p className="py-4 text-lg font-semibold tracking-tight text-neutral-800 md:text-xl dark:text-neutral-100">
         Work Experience
       </p>
-      {companydetails.map((company, index) => (
-        <Companies
-          key={index}
-          logo={company.logo}
-          name={company.name}
-          role={company.role}
-          description={company.description}
-          workedfrom={company.workedfrom}
-          workedto={company.workedto}
-          location={company.location}
-          technologiesWorked={company.technologiesWorked}
-        />
-      ))}
+      <div className="flex flex-col gap-6">
+        {companydetails.map((company, index) => (
+          <Companies
+            key={index}
+            logo={company.logo}
+            name={company.name}
+            role={company.role}
+            description={company.description}
+            workedfrom={company.workedfrom}
+            workedto={company.workedto}
+            location={company.location}
+            technologiesWorked={company.technologiesWorked}
+          />
+        ))}
+      </div>
     </div>
   );
 }

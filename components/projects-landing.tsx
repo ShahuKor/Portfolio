@@ -13,13 +13,13 @@ interface Project {
 
 const projects: Project[] = [
   {
-    src: "/foodflux-image-new.jpg",
-    title: "FoodFlux",
+    src: "/diffsense-landing.png",
+    title: "DiffSense",
     description:
-      "A completely distributed microservices system demonstrating food delivery services and inter-service communication.",
-    slug: "foodflux",
-    githublink:
-      "https://github.com/ShahuKor/FoodFlux-Distributed-Food-Ordering",
+      "A self-hostable AI Agent that reviews pull requests using an agentic Claude AI loop with RAG-based adaptive feedback.",
+    slug: "diffsense",
+    githublink: "https://github.com/ShahuKor/DiffSense",
+    livelink: "https://diffsense-landing.vercel.app/",
   },
   {
     src: "/cutthatpart-new.png",
@@ -30,22 +30,20 @@ const projects: Project[] = [
     githublink: "https://github.com/ShahuKor/CutThatPart",
   },
   {
+    src: "/prysm-homepage.png",
+    title: "Prysm",
+    description:
+      "Interact with PDFS get insights, get cited, source-backed answers with a built-in PDF viewer and persistent chat history.",
+    slug: "prysm",
+    githublink: "https://github.com/ShahuKor/PdfRaG",
+  },
+  {
     src: "/quib-neww.png",
     title: "Quib",
     description:
       "A PDF Summarizer that converts any pdf into reels like componenet, which makes it user friendly and interactive. ",
     slug: "quib",
     githublink: "https://github.com/ShahuKor/Quib",
-  },
-
-  {
-    src: "/cliply-neww.png",
-    title: "Cliply",
-    description:
-      "AI-powered platform to crop images for social formats, compress videos with minimal quality loss.",
-    slug: "cliply",
-    githublink: "https://github.com/ShahuKor/About-Cliply",
-    livelink: "https://cliply-kohl.vercel.app/",
   },
 ];
 
