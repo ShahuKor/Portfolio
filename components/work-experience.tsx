@@ -32,7 +32,7 @@ const companydetails: WorkedCompanies[] = [
     name: "Spanish Point Technologies Ltd.",
     role: "Software Engineering Intern",
     description:
-      "Contributing to client-facing projects across software development, AI and cloud using Microsoft Azure, TypeScript, Python, and React in an agile delivery environment.",
+      "Contributing to client-facing projects across software development and Testing using Microsoft Azure, TypeScript and React in an agile delivery environment.",
     workedfrom: "May '26",
     workedto: "Present",
     location: "Dublin",

@@ -45,7 +45,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     <path d="M19 12H5" />
                     <path d="M12 19l-7-7 7-7" />
                   </svg>
-                  Go Back
+                  Go Back to All Projects
                 </button>
               </Link>
             </div>
@@ -71,12 +71,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               {project.status}
             </div>
 
-            <div className="rounded-lg bg-neutral-800 px-2 py-1 text-xs font-medium text-neutral-100 md:text-sm dark:bg-neutral-200 dark:text-neutral-800">
+            <div className="rounded-lg bg-neutral-800 px-2 py-1 text-[10px] font-medium text-neutral-100 md:text-sm dark:bg-neutral-200 dark:text-neutral-800">
               {project.type}
             </div>
             {project?.website && (
               <Link href={project.website}>
-                <div className="flex items-center gap-2 rounded-lg bg-neutral-800 px-2 py-1 text-xs font-medium text-neutral-100 md:text-sm dark:bg-neutral-200 dark:text-neutral-800">
+                <div className="flex items-center gap-2 rounded-lg bg-neutral-800 px-2 py-1 text-[10px] font-medium text-neutral-100 md:text-sm dark:bg-neutral-200 dark:text-neutral-800">
                   Go to Website
                   <MdArrowOutward />
                 </div>
