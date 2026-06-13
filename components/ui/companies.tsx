@@ -1,6 +1,8 @@
+"use client";
 import Image from "next/image";
 import { IconType } from "react-icons";
 import { useState } from "react";
+import { ReactNode } from "react";
 
 interface Technology {
   name: string;
@@ -9,7 +11,7 @@ interface Technology {
 }
 
 interface ExprienceDescription {
-  descriptionpoint: string;
+  descriptionpoint: ReactNode;
 }
 
 interface CompaniesProps {

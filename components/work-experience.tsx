@@ -8,6 +8,7 @@ import {
   SiPostgresql,
   SiPostman,
 } from "react-icons/si";
+import { ReactNode } from "react";
 
 interface Technology {
   name: string;
@@ -16,7 +17,7 @@ interface Technology {
 }
 
 interface ExprienceDescription {
-  descriptionpoint: string;
+  descriptionpoint: ReactNode;
 }
 
 interface WorkedCompanies {
@@ -37,16 +38,40 @@ const companydetails: WorkedCompanies[] = [
     role: "Software Engineering Intern",
     description: [
       {
-        descriptionpoint:
-          "• Built the API testing framework for the Members Portal of Matching Engine Software from scratch with zero prior infrastructure, independently solving a blocking Azure AD B2C auth challenge using a Selenium-based token acquisition workaround.",
+        descriptionpoint: (
+          <>
+            • Built the API testing framework for the Members Portal of{" "}
+            <a
+              href="https://www.matchingengine.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold underline"
+            >
+              Matching Engine
+            </a>{" "}
+            Software from scratch with zero prior infrastructure, independently
+            solving a blocking Azure AD B2C auth challenge using a
+            Selenium-based token acquisition workaround.
+          </>
+        ),
       },
       {
-        descriptionpoint:
-          "• Reduced test suite auth overhead by ∼90% by refactoring from per-class authentication to a single shared session, cutting auth time from 10s per class to 10s for the entire suite.",
+        descriptionpoint: (
+          <>
+            • Reduced test suite auth overhead by ∼90% by refactoring from
+            per-class authentication to a single shared session, cutting auth
+            time from 10s per class to 10s for the entire suite.
+          </>
+        ),
       },
       {
-        descriptionpoint:
-          "• Diagnosed and resolved client-reported bugs by diving across TypeScript, C#, Cosmos DB, and SQL, tracing root causes through multiple interconnected system components and dependecies.",
+        descriptionpoint: (
+          <>
+            • Diagnosed and resolved client-reported bugs by diving across
+            TypeScript, C#, Cosmos DB, and SQL, tracing root causes through
+            multiple interconnected system components and dependecies.
+          </>
+        ),
       },
     ],
     workedfrom: "May '26",
@@ -59,16 +84,34 @@ const companydetails: WorkedCompanies[] = [
     role: "Software Developer Intern",
     description: [
       {
-        descriptionpoint:
-          "• Built RESTful APIs in Node.js and PostgreSQL for an enterprise resource management platform serving a high-transaction agricultural business, covering sales, purchases, transport, and user workflows.",
+        descriptionpoint: (
+          <>
+            {" "}
+            • Built RESTful APIs in Node.js and PostgreSQL for an enterprise
+            resource management platform serving a high-transaction agricultural
+            business, covering sales, purchases, transport, and user workflows.
+          </>
+        ),
       },
       {
-        descriptionpoint:
-          "• Implemented Role-Based Authorisation across the platform, enforcing permission-based access for multiple user roles and securing sensitive business operations.",
+        descriptionpoint: (
+          <>
+            {" "}
+            • Implemented Role-Based Authorisation across the platform,
+            enforcing permission-based access for multiple user roles and
+            securing sensitive business operations.
+          </>
+        ),
       },
       {
-        descriptionpoint:
-          "• Collaborated within a 5-person team to deliver modular, production-ready backend services, translating client requirements into maintainable service architecture.",
+        descriptionpoint: (
+          <>
+            {" "}
+            • Collaborated within a 5-person team to deliver modular,
+            production-ready backend services, translating client requirements
+            into maintainable service architecture.
+          </>
+        ),
       },
     ],
     workedfrom: "August '24",

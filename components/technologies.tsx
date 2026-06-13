@@ -11,6 +11,7 @@ import {
   SiPython,
   SiKubernetes,
   SiExpress,
+  SiDotnet,
 } from "react-icons/si";
 import { FaAws } from "react-icons/fa";
 
@@ -19,6 +20,7 @@ const technologies = [
   { name: "JavaScript", Icon: SiJavascript, color: "F0DB4F" },
   { name: "React", Icon: SiReact, color: "#61DAFB" },
   { name: "Node.js", Icon: SiNodedotjs, color: "#339933" },
+  { name: ".Net", Icon: SiDotnet, color: "#482bb3" },
   { name: "Express", Icon: SiExpress, color: "#000000" },
   { name: "Next.js", Icon: SiNextdotjs, color: "#000000" },
   { name: "MongoDB", Icon: SiMongodb, color: "#47A248" },
