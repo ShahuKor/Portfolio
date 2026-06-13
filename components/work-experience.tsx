@@ -15,11 +15,15 @@ interface Technology {
   color: string;
 }
 
+interface ExprienceDescription {
+  descriptionpoint: string;
+}
+
 interface WorkedCompanies {
   logo: string;
   name: string;
   role: string;
-  description: string;
+  description: ExprienceDescription[];
   workedfrom: string;
   workedto: string;
   location: string;
@@ -31,8 +35,20 @@ const companydetails: WorkedCompanies[] = [
     logo: "/spanishpointlogo.png",
     name: "Spanish Point Technologies Ltd.",
     role: "Software Engineering Intern",
-    description:
-      "Contributing to client-facing projects across software development and Testing using Microsoft Azure, TypeScript and React in an agile delivery environment.",
+    description: [
+      {
+        descriptionpoint:
+          "• Built the API testing framework for the Members Portal of Matching Engine Software from scratch with zero prior infrastructure, independently solving a blocking Azure AD B2C auth challenge using a Selenium-based token acquisition workaround.",
+      },
+      {
+        descriptionpoint:
+          "• Reduced test suite auth overhead by ∼90% by refactoring from per-class authentication to a single shared session, cutting auth time from 10s per class to 10s for the entire suite.",
+      },
+      {
+        descriptionpoint:
+          "• Diagnosed and resolved client-reported bugs by diving across TypeScript, C#, Cosmos DB, and SQL, tracing root causes through multiple interconnected system components and dependecies.",
+      },
+    ],
     workedfrom: "May '26",
     workedto: "Present",
     location: "Dublin",
@@ -41,8 +57,20 @@ const companydetails: WorkedCompanies[] = [
     logo: "/Technetzlogo600.png",
     name: "TechNetz Solutions",
     role: "Software Developer Intern",
-    description:
-      "Worked on backend development for an enterprise resource management platform built with Node.js and PostgreSQL, developing APIs across sales, purchases, transport, and user workflows. Contributed to the platform’s RBAC system for secure role-level authorization and helped build scalable, maintainable backend services in a collaborative production environment.",
+    description: [
+      {
+        descriptionpoint:
+          "• Built RESTful APIs in Node.js and PostgreSQL for an enterprise resource management platform serving a high-transaction agricultural business, covering sales, purchases, transport, and user workflows.",
+      },
+      {
+        descriptionpoint:
+          "• Implemented Role-Based Authorisation across the platform, enforcing permission-based access for multiple user roles and securing sensitive business operations.",
+      },
+      {
+        descriptionpoint:
+          "• Collaborated within a 5-person team to deliver modular, production-ready backend services, translating client requirements into maintainable service architecture.",
+      },
+    ],
     workedfrom: "August '24",
     workedto: "January '25",
     location: "India",

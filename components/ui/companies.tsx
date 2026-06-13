@@ -8,11 +8,15 @@ interface Technology {
   color: string;
 }
 
+interface ExprienceDescription {
+  descriptionpoint: string;
+}
+
 interface CompaniesProps {
   logo: string;
   name: string;
   role: string;
-  description: string;
+  description: ExprienceDescription[];
   workedfrom: string;
   workedto: string;
   location: string;
@@ -140,10 +144,14 @@ export default function Companies({
               </div>
             </div>
           )}
-
-          <p className="text-xs font-medium tracking-wide text-(--color-secondary) md:text-sm">
-            {description}
-          </p>
+          {description.map((desc, key) => (
+            <p
+              key={key}
+              className="pt-2 text-xs font-medium tracking-wide text-(--color-secondary) sm:pt-1 md:text-sm"
+            >
+              {desc.descriptionpoint}
+            </p>
+          ))}
         </div>
       </div>
     </div>
